@@ -1,0 +1,103 @@
+/**
+ * Amazon Affiliate Pro - Admin Global Styles
+ * Styles that apply across all admin pages
+ *
+ * @package AAPI
+ * @since   1.0.0
+ */
+
+/* Admin Menu Icon */
+#adminmenu #toplevel_page_aapi .wp-menu-image::before {
+    content: "\f174"; /* Using cart icon as placeholder */
+    font-family: dashicons;
+}
+
+/* Override for custom Amazon icon if available */
+#adminmenu #toplevel_page_aapi .wp-menu-image {
+    background-image: url('../images/amazon-icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+#adminmenu #toplevel_page_aapi .wp-menu-image::before {
+    content: "";
+}
+
+/* Admin Bar */
+#wp-admin-bar-aapi-toolbar {
+    /* Styles for admin bar menu if needed */
+}
+
+/* Global AAPI Elements */
+.aapi-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    background-color: #0073aa;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.aapi-badge.aapi-badge-success {
+    background-color: #46b450;
+}
+
+.aapi-badge.aapi-badge-warning {
+    background-color: #ffb900;
+}
+
+.aapi-badge.aapi-badge-error {
+    background-color: #dc3232;
+}
+
+/* Post State */
+.post-state-aapi {
+    color: #0073aa;
+}
+
+/* At a Glance Widget */
+#dashboard_right_now .aapi-count::before {
+    content: "\f174";
+}
+
+/* Screen Options */
+.aapi-screen-option {
+    /* Custom screen option styles */
+}
+
+/* Help Tab */
+.aapi-help-tab {
+    /* Custom help tab styles */
+}
+
+/* Admin Notices */
+.notice-aapi {
+    border-left-color: #0073aa;
+}
+
+.notice-aapi .notice-dismiss::before {
+    color: #0073aa;
+}
+
+/* Spinner Override */
+.aapi-spinner {
+    visibility: hidden;
+    float: right;
+    margin: 4px 10px 0;
+}
+
+.aapi-spinner.is-active {
+    visibility: visible;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+    .aapi-badge {
+        padding: 2px 6px;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,409 @@
+/**
+ * Amazon Affiliate Pro - Admin Styles
+ *
+ * @package AAPI
+ * @since   1.0.0
+ */
+
+/* General Admin Styles */
+.aapi-metabox {
+    padding: 10px 0;
+}
+
+.aapi-metabox p {
+    margin-bottom: 15px;
+}
+
+.aapi-metabox label {
+    display: inline-block;
+    min-width: 150px;
+    vertical-align: top;
+}
+
+.aapi-metabox .description {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Settings Page */
+.aapi-settings-form .form-table th {
+    width: 250px;
+}
+
+.aapi-settings-form .description {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* API Test Section */
+.aapi-api-test-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.aapi-api-test-section h3 {
+    margin-top: 0;
+}
+
+#aapi-test-results {
+    margin-top: 15px;
+    padding: 10px;
+    display: none;
+}
+
+#aapi-test-results.success {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+#aapi-test-results.error {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* Product Edit Screen */
+.aapi-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.aapi-gallery-item {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background: #f5f5f5;
+}
+
+.aapi-gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Status Indicators */
+.aapi-status-success {
+    color: #46b450;
+}
+
+.aapi-status-error {
+    color: #dc3232;
+}
+
+.aapi-status-warning {
+    color: #ffb900;
+}
+
+/* Product List Columns */
+.column-asin {
+    width: 120px;
+}
+
+.column-price {
+    width: 100px;
+}
+
+.column-availability {
+    width: 120px;
+}
+
+.column-last_updated {
+    width: 150px;
+}
+
+.aapi-availability {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.aapi-in-stock {
+    background: #d4edda;
+    color: #155724;
+}
+
+.aapi-out-of-stock {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.aapi-prime {
+    display: inline-block;
+    background: #ff9900;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.aapi-sale-price {
+    color: #b12704;
+}
+
+/* Import Page */
+.aapi-import-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.aapi-import-section h2 {
+    margin-top: 0;
+}
+
+.aapi-import-form {
+    margin-top: 20px;
+}
+
+.aapi-import-form .form-field {
+    margin-bottom: 15px;
+}
+
+.aapi-import-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.aapi-import-results {
+    margin-top: 20px;
+    display: none;
+}
+
+.aapi-import-results.active {
+    display: block;
+}
+
+.aapi-product-preview {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+/* Reports Page */
+.aapi-reports-nav {
+    margin-bottom: 20px;
+}
+
+.aapi-reports-nav .nav-tab {
+    cursor: pointer;
+}
+
+.aapi-report-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.aapi-chart-container {
+    position: relative;
+    height: 400px;
+    margin: 20px 0;
+}
+
+.aapi-stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.aapi-stats-table th,
+.aapi-stats-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.aapi-stats-table th {
+    background: #f5f5f5;
+    font-weight: 600;
+}
+
+/* Tools Page */
+.aapi-tool-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.aapi-tool-section h3 {
+    margin-top: 0;
+}
+
+.aapi-diagnostic-results {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 15px;
+    font-family: monospace;
+    font-size: 13px;
+    white-space: pre-wrap;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+    .aapi-metabox label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .aapi-settings-form .form-table th {
+        width: auto;
+    }
+    
+    .aapi-gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+}
+
+/* Loading States */
+.aapi-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.aapi-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: aapi-spin 1s linear infinite;
+}
+
+@keyframes aapi-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Notices */
+.aapi-notice {
+    padding: 12px;
+    margin: 10px 0;
+    border-left: 4px solid;
+}
+
+.aapi-notice-success {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.aapi-notice-error {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+.aapi-notice-warning {
+    background: #fff3cd;
+    border-color: #ffc107;
+    color: #856404;
+}
+
+.aapi-notice-info {
+    background: #d1ecf1;
+    border-color: #17a2b8;
+    color: #0c5460;
+}
+
+/* Buttons */
+.aapi-button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.aapi-button-group .button {
+    flex: 0 0 auto;
+}
+
+/* Icons */
+.dashicons-amazon::before {
+    content: "\f103";
+    /* Using a placeholder icon - you can replace with custom Amazon icon */
+}
+
+/* Tooltips */
+.aapi-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.aapi-tooltip .aapi-tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.aapi-tooltip:hover .aapi-tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Color Picker */
+.aapi-color-picker {
+    max-width: 100px;
+}
+
+/* Tabs */
+.aapi-tabs {
+    border-bottom: 1px solid #ccd0d4;
+    margin-bottom: 20px;
+}
+
+.aapi-tab {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: -1px;
+    cursor: pointer;
+    background: #f1f1f1;
+    border: 1px solid #ccd0d4;
+    border-bottom: none;
+}
+
+.aapi-tab.active {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.aapi-tab-content {
+    display: none;
+}
+
+.aapi-tab-content.active {
+    display: block;
+}
