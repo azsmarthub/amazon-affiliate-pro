@@ -147,25 +147,29 @@ class Plugin {
         if (is_admin()) {
             $this->components['admin'] = new Admin\Admin($this->get_plugin_name(), $this->get_version());
             $this->components['admin_settings'] = new Admin\Settings_Page();
-            $this->components['product_import'] = new Admin\Product_Import();
-            $this->components['reports'] = new Admin\Reports();
-            $this->components['tools'] = new Admin\Tools();
+            
+            // TODO: Phase 2 - Implement these classes
+            // $this->components['product_import'] = new Admin\Product_Import();
+            // $this->components['reports'] = new Admin\Reports();
+            // $this->components['tools'] = new Admin\Tools();
         } else {
-            $this->components['frontend'] = new Frontend\Frontend($this->get_plugin_name(), $this->get_version());
-            $this->components['shortcodes'] = new Frontend\Shortcodes();
-            $this->components['tracking'] = new Services\Tracking();
+            // TODO: Phase 3 - Implement frontend classes
+            // $this->components['frontend'] = new Frontend\Frontend($this->get_plugin_name(), $this->get_version());
+            // $this->components['shortcodes'] = new Frontend\Shortcodes();
+            // $this->components['tracking'] = new Services\Tracking();
         }
         
         // API components
         $this->components['api_manager'] = new API\API_Manager();
         
-        // Service components
-        $this->components['cron'] = new Services\Cron();
-        $this->components['cache'] = new Services\Cache();
+        // TODO: Phase 2 - Service components
+        // $this->components['cron'] = new Services\Cron();
+        // $this->components['cache'] = new Services\Cache();
         
         // Check for CLI
         if (defined('WP_CLI') && WP_CLI) {
-            $this->components['cli'] = new CLI\Commands();
+            // TODO: Phase 4 - CLI commands
+            // $this->components['cli'] = new CLI\Commands();
         }
     }
 
@@ -200,9 +204,9 @@ class Plugin {
         $settings = $this->components['admin_settings'];
         $this->loader->add_action('admin_init', $settings, 'init_settings');
         
-        // AJAX handlers
-        $this->loader->add_action('wp_ajax_aapi_import_product', $this->components['product_import'], 'ajax_import_product');
-        $this->loader->add_action('wp_ajax_aapi_search_products', $this->components['product_import'], 'ajax_search_products');
+        // AJAX handlers - TODO: Implement in Phase 2
+        // $this->loader->add_action('wp_ajax_aapi_import_product', $this->components['product_import'], 'ajax_import_product');
+        // $this->loader->add_action('wp_ajax_aapi_search_products', $this->components['product_import'], 'ajax_search_products');
         $this->loader->add_action('wp_ajax_aapi_test_api', $this->components['admin_settings'], 'ajax_test_api');
         
         // Post type customizations
@@ -229,6 +233,8 @@ class Plugin {
      * @access   private
      */
     private function define_public_hooks() {
+        // TODO: Phase 3 - Implement frontend functionality
+        /*
         $frontend = $this->components['frontend'] ?? null;
         
         if ($frontend) {
@@ -254,6 +260,7 @@ class Plugin {
         // AJAX handlers for frontend
         $this->loader->add_action('wp_ajax_aapi_track_click', $this->components['tracking'] ?? null, 'ajax_track_click');
         $this->loader->add_action('wp_ajax_nopriv_aapi_track_click', $this->components['tracking'] ?? null, 'ajax_track_click');
+        */
         
         // Gutenberg blocks
         $this->loader->add_action('init', $this, 'register_blocks');
@@ -266,6 +273,8 @@ class Plugin {
      * @access   private
      */
     private function define_cron_hooks() {
+        // TODO: Phase 2 - Implement cron functionality
+        /*
         $cron = $this->components['cron'];
         
         // Product updates
@@ -282,6 +291,7 @@ class Plugin {
         
         // Custom cron schedules
         $this->loader->add_filter('cron_schedules', $cron, 'add_cron_schedules');
+        */
     }
 
     /**
@@ -294,6 +304,8 @@ class Plugin {
             return;
         }
 
+        // TODO: Phase 3 - Implement Gutenberg blocks
+        /*
         // Register block scripts
         wp_register_script(
             'aapi-blocks',
@@ -347,6 +359,7 @@ class Plugin {
                 ),
             ),
         ));
+        */
     }
 
     /**

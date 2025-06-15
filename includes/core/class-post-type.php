@@ -77,7 +77,7 @@ class Post_Type {
             'public'             => false,
             'publicly_queryable' => false,
             'show_ui'            => true,
-            'show_in_menu'       => false, // We'll add it to our custom menu
+            'show_in_menu'       => 'aapi', // Show under our main plugin menu
             'query_var'          => false,
             'rewrite'            => false,
             'capability_type'    => 'post',

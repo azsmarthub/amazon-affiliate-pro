@@ -1,0 +1,84 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Composer
+/vendor/
+composer.lock
+
+# Node
+/node_modules/
+package-lock.json
+npm-debug.log
+yarn-error.log
+
+# Build files
+/dist/
+/build/
+*.map
+*.min.js
+*.min.css
+
+# WordPress
+*.log
+wp-config.php
+advanced-cache.php
+backup-db/
+backups/
+blogs.dir/
+cache/
+upgrade/
+uploads/
+wp-cache-config.php
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
+
+# Plugin specific
+/logs/*.log
+/logs/*.txt
+*.cache
+.env
+.env.local
+.env.*.local
+
+# Testing
+/tests/coverage/
+/tests/temp/
+.phpunit.result.cache
+phpunit.xml
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Development
+/dev/
+/tmp/
+/temp/
+
+# Keep empty directories
+!.gitkeep
+!logs/.gitkeep
+!languages/.gitkeep
